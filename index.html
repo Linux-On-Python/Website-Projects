@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Miguel Alejandro Leon Cordero</title>
+
+    <!-- Favicon - the icon on the browser tab -->
+     <link rel="icon" type="image/png" href="assets/images/Logo-without-background.png">
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <!-- Css Connection -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Page load overlay -->
+     <div class="page-loader">
+        <div class="loader-content">
+            <p class="loader-name">Miguel Alejandro</p>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+     </div>
+
+    <header>
+        <!-- Logo -->
+         <div class="logo">
+            <img src="assets/images/Logo.png" alt="Miguel Leon">
+         </div>
+
+        <!-- Navigation links -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Language switcher -->
+         <div class="lang-switch">
+            <a href="index.html">EN</a>
+            <a href="index-es.html">ES</a>
+         </div>
+
+         <!-- Hamburger button - hidden on desktop, visible on mobile -->
+          <button class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+    </header>
+
+    <main><!-- Home -->
+        <section id="home">
+            
+            <!-- Screen of home contain animation and background-->
+            <div class="hero">
+
+                <!-- Animated elements (clouds & leaves go here via JavaScript) -->
+                <div class="hero-animations"></div>
+
+                <!-- Main message -->
+                <div class="hero-content">
+
+                    <!-- Content -->
+                    <h1>Miguel Alejandro Leon Cordero</h1>
+                    <p class="hero-subtitle">Media Designer</p>
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+
+            <!--Some Animated elements -->
+            <div class="about-animations"></div>
+
+            <!-- Main message -->
+             <div class="about-content">
+
+                <h2>About Me</h2>
+                
+                <p>Hi, I’m Miguel Alejandro. I am a Software Engineering student transitioning into the creative world of Media Design, with a strong focus on Web Design and UX/UI. My background in software engineering gives me an analytical, structured problem-solving mindset and technical skills in HTML/CSS and Python. However, my true passion lies in human-centered design—building intuitive, accessible, and visually compelling digital experiences. I love bridging the gap between clean code and visual creativity to build interfaces that not only look great but also feel seamless to the user. I am always eager to learn, adapt to new creative tools, and collaborate on innovative digital projects.</p>
+            </div>
+        </section>
+
+         <!-- proejcts -->
+        <section id="projects">
+            <div class="projects-content">
+
+                <h2>Projects</h2>
+
+                <!-- Cards grid -->
+                <div class="projects-grid">
+
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+
+                        <!-- Project image -->
+                        <div class="project-image">
+                            <img src="assets/images/project-1.webp" 
+                                alt="Express Entry Points Simulator screenshot">
+                        </div>
+
+                        <!-- Project info -->
+                        <div class="project-info">
+                            <h3>Express Entry Points Simulator</h3>
+                            <p>An unofficial simulator that calculates your 
+                            Comprehensive Ranking System score for Canada's 
+                            Express Entry immigration program.</p>
+                            <span class="project-disclaimer">
+                                * Not affiliated with the Government of Canada.
+                            </span>
+                        </div>
+
+                        <!-- Button at the bottom -->
+                        <a href="https://miguelleon-creator.github.io/Express-Entry-Points-Simulator/" 
+                        class="project-link"
+                        target="_blank">
+                        View Project
+                        </a>
+
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+                            <img src="assets/images/project-2.webp" 
+                                alt="M&A Studios project screenshot">
+                        </div>
+
+                        <div class="project-info">
+                            <h3>M&A Studios</h3>
+                            <p>A professional web design studio showcasing 
+                            client work and offering website creation 
+                            services.</p>
+                        </div>
+
+                        <a href="https://miguelleon-creator.github.io/M-A-Studios-Proejct/" 
+                        class="project-link"
+                        target="_blank">
+                        View Project
+                        </a>
+
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+                            
+                            <img src="assets/images/project-3.webp" alt="Kitchen Pasion">
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Kitchen Pasion</h3>
+
+                            <p>A prototype app for discovering and cooking authentic internacional recipes at home using the exact ingredients and methods from their country of origin </p>
+                        </div>
+
+                        <a href="https://www.figma.com/proto/0dbO5yj5XopLUOTJS3fkdC/Untitled?node-id=0-1&t=U4OozwfaJjb96rFc-1" class="project-link" target="_blank">View Project</a>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+          <section id="skills">
+
+            <!--Some Animated elements -->
+            <div class="skills-animations"></div>
+
+            <!-- Main message -->
+             <div class="skills-content">
+
+                <h2>Skills</h2>
+                
+               <!-- Grid container holding all cards skill -->
+                <div class="skills-grid">
+
+                    <!-- Card 1 -->
+                    <div class="skill-card">
+                        <h3>Web & Interface Design</h3>
+                        
+                        <ul>
+                            <li>UX/UI Design Foundations</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>Front-End Essentials: HTML 5 & CSS3</li>
+                        </ul>
+                    </div>
+
+                     <!-- Card 2 -->
+                    <div class="skill-card">
+                        <h3>Programming & Tools</h3>
+                        
+                        <ul>
+                            <li>Python Programming</li>
+                            <li>Version Control with Github</li>
+                            <li>Data Management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                     <div class="skill-card">
+                        <h3>Systems & IT</h3>
+
+                        <ul>
+                            <li>Linux Administration</li>
+                            <li>Advanced Windows Environments</li>
+                            <li>Technical Troubleshooting</li>
+                        </ul>
+                     </div>
+
+                     <!-- Card 4 -->
+                      <div class="skill-card">
+                        <h3>Core Competencies</h3>
+
+                        <ul>
+                            <li>Analytical Problem-Solving</li>
+                            <li>Effective Communication</li>
+                            <li>Adaptability & Collaboration</li>
+                        </ul>
+                      </div>
+                </div>
+             </div>
+          </section>
+
+          <section id="contact">
+
+            <div class="contact-content">
+                <h2>Contact</h2>
+                <p class="contact-intro">Interested in working together or just want to say hello? Feel free to reach out.</p>
+
+                <!-- Contact details grid -->
+                <div class="contact-grid">
+
+                    <!-- Left side - contact info -->
+                    <div class="contact-info">
+
+                        <div class="contact-item">
+
+                            <!-- Email -->
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:worklink202621@protonmail.com">worklink202621@protonmail.com</a>
+                        </div>
+
+                        <div class="contant-item">
+
+                            <!-- Location -->
+                             <span class="contact-label">Location</span>
+                             <span>Santo Domingo, Dominican Republic</span>
+                        </div>
+                    </div>
+
+                    <!-- Right side - social links -->
+                     <div class="contact-social">
+
+                        <span class="contact-label">Find me online</span>
+
+                        <a href="https://www.linkedin.com/in/miguelleonin2005/" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/Linux-On-Python" class="social-link">GitHub</a>
+                     </div>
+                </div>
+            </div>
+          </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Miguel Leon</p>
+        <div class="lang-switch">
+            <a href="index.html">EN</a>
+            <a href="index-es.html">ES</a>
+        </div>
+    </footer>
+
+        <!-- JavaScript -->
+    <script src="JS/main.js"></script>
+</body>
+</html>
