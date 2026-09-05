@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - Miguel Alejandro Leon Cordero</title>
 
-    <!-- Favicon - the icon on the browser tab -->
-     <link rel="icon" type="image/png" href="assets/images/Logo-without-background.png">
-     <!-- Google Font -->
-     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&display=swap" rel="stylesheet">
-    <!-- Css Connection -->
+    <!-- Favicon - the browser tab logo -->
+    <link rel="icon" type="image/png" href="assets/images/Logo-without-background.png">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS Connection -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Page load overlay -->
-     <div class="page-loader">
+    <!-- Loading Screen -->
+    <div class="page-loader">
         <div class="loader-content">
             <p class="loader-name">Miguel Alejandro</p>
             <div class="loader-bar">
                 <div class="loader-progress"></div>
             </div>
         </div>
-     </div>
+    </div>
 
     <header>
         <!-- Logo -->
-         <div class="logo">
+        <div class="logo">
             <img src="assets/images/Logo.png" alt="Miguel Leon">
-         </div>
+        </div>
 
-        <!-- Navigation links -->
+        <!-- Navigation Links -->
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
@@ -39,33 +39,33 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <!-- Language switcher -->
-         <div class="lang-switch">
+        <!-- Language Switcher -->
+        <div class="lang-switch">
             <a href="index.html">EN</a>
             <a href="index-es.html">ES</a>
-         </div>
+        </div>
 
-         <!-- Hamburger button - hidden on desktop, visible on mobile -->
-          <button class="hamburger" aria-label="Open menu">
+        <!-- Hamburger Menu -->
+        <button class="hamburger" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
-          </button>
+        </button>
     </header>
 
-    <main><!-- Home -->
+    <main>
+
+        <!-- Home -->
         <section id="home">
-            
-            <!-- Screen of home contain animation and background-->
+
+            <!-- Home screen contains background and animations -->
             <div class="hero">
 
-                <!-- Animated elements (clouds & leaves go here via JavaScript) -->
+                <!-- Animated elements (clouds and leaves via JavaScript) -->
                 <div class="hero-animations"></div>
 
-                <!-- Main message -->
+                <!-- Main Message -->
                 <div class="hero-content">
-
-                    <!-- Content -->
                     <h1>Miguel Alejandro Leon Cordero</h1>
                     <p class="hero-subtitle">Media Designer</p>
                     <a href="#projects" class="btn-primary">View My Work</a>
@@ -73,18 +73,18 @@
             </div>
         </section>
 
-        <!-- About -->
+        <!-- About Me -->
         <section id="about">
 
-            <!--Some Animated elements -->
+            <!-- Animated elements -->
             <div class="about-animations"></div>
 
-            <!-- Main message -->
-             <div class="about-content">
+            <!-- Main Message -->
+            <div class="about-content">
 
                 <h2>About Me</h2>
-                
-                <p>Hi, I’m Miguel Alejandro. I am a Software Engineering student transitioning into the creative world of Media Design, with a strong focus on Web Design and UX/UI. My background in software engineering gives me an analytical, structured problem-solving mindset and technical skills in HTML/CSS and Python. However, my true passion lies in human-centered design—building intuitive, accessible, and visually compelling digital experiences. I love bridging the gap between clean code and visual creativity to build interfaces that not only look great but also feel seamless to the user. I am always eager to learn, adapt to new creative tools, and collaborate on innovative digital projects.</p>
+
+                <p>Hello, I'm Miguel Alejandro. I'm a Software Engineering student transitioning into the creative world of Media Design, with a strong focus on Web Design and UX/UI. My background in software engineering provides me with an analytical and structured problem-solving mindset, as well as technical skills in HTML/CSS and Python. However, my true passion lies in user-centered design: creating intuitive, accessible, and visually compelling digital experiences. I love combining clean code with visual creativity to build interfaces that not only look great but also feel natural to use. I am always eager to learn, adapt to new creative tools, and collaborate on innovative digital projects.</p>
             </div>
         </section>
 
@@ -166,7 +166,7 @@
                         
                     </div>
 
-                        <!-- Project Card 4 -->
+                    <!-- Project Card 4 -->
                     <div class="project-card">
                         
                         <div class="project-image">
@@ -185,110 +185,133 @@
                         </a>
 
                     </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+                            <img src="assets/images/project-5.png" alt="Sonic 1 Co-op Soundtrack Player screenshot">
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Sonic 1 Co-op Soundtrack Player</h3>
+                            <p>An interactive web-based music player created to promote and showcase the original soundtrack developed by fan creators for Sonic 1 Co-op. Built with vanilla web technologies, the app features custom UI state controls, persistent audio preferences via LocalStorage, and screen WakeLock integration.</p>
+                            <span class="project-disclaimer">
+                                * Non-commercial fan project. Sonic the Hedgehog is a registered trademark of SEGA.
+                            </span>
+                        </div>
+
+                        <a href="https://linux-on-python.github.io/sonic-1-coop-soundtrack/" 
+                            class="project-link" 
+                            target="_blank">
+                            View Project
+                        </a>
+
+                    </div>
                     
                 </div>
 
-                </div>
             </div>
         </section>
-          <section id="skills">
 
-            <!--Some Animated elements -->
+        <!-- Skills -->
+        <section id="skills">
+
+            <!-- Animated elements -->
             <div class="skills-animations"></div>
 
-            <!-- Main message -->
-             <div class="skills-content">
+            <!-- Main Message -->
+            <div class="skills-content">
 
                 <h2>Skills</h2>
-                
-               <!-- Grid container holding all cards skill -->
+
+                <!-- Skill Cards Grid -->
                 <div class="skills-grid">
 
                     <!-- Card 1 -->
                     <div class="skill-card">
-                        <h3>Web & Interface Design</h3>
-                        
+                        <h3>Web Design & Interfaces</h3>
                         <ul>
-                            <li>UX/UI Design Foundations</li>
+                            <li>UX/UI Fundamentals</li>
                             <li>Wireframing & Prototyping</li>
-                            <li>Front-End Essentials: HTML 5 & CSS3</li>
+                            <li>Front-End Fundamentals: HTML5 & CSS3</li>
                         </ul>
                     </div>
 
-                     <!-- Card 2 -->
+                    <!-- Card 2 -->
                     <div class="skill-card">
                         <h3>Programming & Tools</h3>
-                        
                         <ul>
                             <li>Python Programming</li>
-                            <li>Version Control with Github</li>
+                            <li>Version Control with GitHub</li>
                             <li>Data Management</li>
                         </ul>
                     </div>
 
                     <!-- Card 3 -->
-                     <div class="skill-card">
+                    <div class="skill-card">
                         <h3>Systems & IT</h3>
-
                         <ul>
                             <li>Linux Administration</li>
                             <li>Advanced Windows Environments</li>
-                            <li>Technical Troubleshooting</li>
+                            <li>Technical Support</li>
                         </ul>
-                     </div>
+                    </div>
 
-                     <!-- Card 4 -->
-                      <div class="skill-card">
+                    <!-- Card 4 -->
+                    <div class="skill-card">
                         <h3>Core Competencies</h3>
-
                         <ul>
-                            <li>Analytical Problem-Solving</li>
+                            <li>Analytical Problem Solving</li>
                             <li>Effective Communication</li>
                             <li>Adaptability & Collaboration</li>
                         </ul>
-                      </div>
-                </div>
-             </div>
-          </section>
+                    </div>
 
-          <section id="contact">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
 
             <div class="contact-content">
                 <h2>Contact</h2>
-                <p class="contact-intro">Interested in working together or just want to say hello? Feel free to reach out.</p>
+                <p class="contact-intro">Interested in working together or just want to say hi? Feel free to write to me.</p>
 
-                <!-- Contact details grid -->
+                <!-- Contact Grid -->
                 <div class="contact-grid">
 
                     <!-- Left side - contact info -->
                     <div class="contact-info">
 
                         <div class="contact-item">
-
                             <!-- Email -->
                             <span class="contact-label">Email</span>
                             <a href="mailto:worklink202621@protonmail.com">worklink202621@protonmail.com</a>
                         </div>
 
-                        <div class="contant-item">
-
+                        <div class="contact-item">
                             <!-- Location -->
-                             <span class="contact-label">Location</span>
-                             <span>Santo Domingo, Dominican Republic</span>
+                            <span class="contact-label">Location</span>
+                            <span>Santo Domingo, Dominican Republic</span>
                         </div>
+
                     </div>
 
                     <!-- Right side - social links -->
-                     <div class="contact-social">
+                    <div class="contact-social">
 
                         <span class="contact-label">Find me online</span>
 
                         <a href="https://www.linkedin.com/in/miguelleonin2005/" class="social-link">LinkedIn</a>
                         <a href="https://github.com/Linux-On-Python" class="social-link">GitHub</a>
-                     </div>
+
+                    </div>
                 </div>
             </div>
-          </section>
+        </section>
+
     </main>
 
     <footer>
@@ -298,8 +321,8 @@
             <a href="index-es.html">ES</a>
         </div>
     </footer>
-
-        <!-- JavaScript -->
+        
+    <!-- JavaScript -->
     <script src="JS/main.js"></script>
 </body>
 </html>
