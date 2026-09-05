@@ -10,10 +10,13 @@
     --color-text-light: #f0f4f0;
     --color-text-muted: rgba(240, 244, 240, 0.7);
     --color-accent: #8fbc8f;
+
     --font-pixel: 'Raleway', sans-serif;
     --font-body: 'Segoe UI', sans-serif;
+
     --section-padding: 80px 40px;
 }
+
 
 /* ================================
    RESET
@@ -23,6 +26,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* Prevent images and media from
+   creating unexpected overflow */
+img {
+    max-width: 100%;
+    display: block;
+}
+
 
 /* ================================
    BODY
@@ -34,10 +46,12 @@ body {
     background-color: #0a1208;
 }
 
+
 h1 {
     color: var(--color-accent);
     font-family: var(--font-pixel);
 }
+
 
 /* ================================
    HEADER
@@ -47,27 +61,46 @@ header {
     top: 0;
     left: 0;
     right: 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 40px;
+
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
+
     z-index: 100;
 }
 
+
+/* Navigation */
 nav {
     display: flex;
     gap: 30px;
+
+    min-width: 0;
 }
+
 
 nav a {
     color: var(--color-text-light);
     text-decoration: none;
+
     font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    white-space: nowrap;
 }
+
+
+/* Logo */
+.logo {
+    min-width: 0;
+}
+
 
 .logo img {
     height: 45px;
@@ -77,111 +110,150 @@ nav a {
     mix-blend-mode: screen;
 }
 
+
+/* Language switch */
 .lang-switch {
     display: flex;
     gap: 10px;
+
+    flex-shrink: 0;
 }
+
 
 .lang-switch a {
     color: var(--color-text-muted);
     text-decoration: none;
+
     font-size: 12px;
-    border: 1px solid rgba(255,255,255,0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
     padding: 4px 8px;
 }
+
 
 /* ================================
    HERO SECTION
 ================================ */
 
-/* FIX 1 — removes white border around hero
-   The general section rule adds padding to ALL sections
-   including home. This overrides it to zero */
+/* Removes general section padding
+   from the home section */
 #home {
     padding: 0;
 }
 
+
 .hero {
     height: 100vh;
+
     background-image: url('../assets/images/hero-bg.webp');
     background-size: cover;
     background-position: center;
+
     position: relative;
     overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* FIX 2 — reduced from 0.4 to 0.15 so photo is brighter */
     background-color: rgba(0, 0, 0, 0.15);
     background-blend-mode: darken;
 }
 
-/* FIX 3 — reduced overlay from 0.45 to 0.2 so photo shows more */
+
+/* Dark overlay */
 .hero::before {
     content: '';
+
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     background: rgba(0, 0, 0, 0.2);
+
     z-index: 1;
 }
 
-/* FIX 4 — removed padding-top that was pushing content down
-   added width: 100% so centering works properly */
+
+/* Hero content */
 .hero-content {
     position: relative;
     z-index: 2;
+
     text-align: center;
+
     width: 100%;
     max-width: 700px;
+
+    min-width: 0;
 }
+
 
 .hero-content h1 {
     font-size: 82px;
     font-weight: 700;
     font-style: italic;
+
     color: var(--color-accent);
     font-family: var(--font-pixel);
+
     margin-bottom: 20px;
 
-    /* FIX 5 — glow color updated to match sage green accent */
     text-shadow: 0 0 30px rgba(143, 188, 143, 0.6);
 }
 
-/* FIX 6 — subtitle was inheriting max-width from section p
-   max-width: none removes that so it centers properly */
+
+/* Hero subtitle */
 .hero-content .hero-subtitle {
     font-size: 20px;
+
     color: var(--color-text-muted);
+
     letter-spacing: 4px;
     text-transform: uppercase;
+
     margin-bottom: 40px;
+
     display: block;
+
     text-align: center;
+
     width: 100%;
     max-width: none;
 }
 
+
+/* Primary button */
 .btn-primary {
     display: inline-block;
+
     padding: 14px 32px;
+
     border: 2px solid var(--color-text-light);
+
     color: var(--color-text-light);
     text-decoration: none;
+
     letter-spacing: 3px;
     text-transform: uppercase;
+
     font-size: 12px;
+
     transition: all 0.3s ease;
 }
 
+
 .btn-primary:hover {
     background: var(--color-accent);
+
     border-color: var(--color-accent);
+
     color: #000000;
 }
+
 
 /* ================================
    GENERAL SECTIONS
@@ -189,167 +261,419 @@ nav a {
 section {
     padding: 100px 40px;
 
-    /* FIX 7 — was missing semicolon at end */
     color: var(--color-text-light);
+
+    overflow: hidden;
 }
+
 
 section h2 {
     font-family: var(--font-pixel);
+
     font-size: 28px;
     font-weight: 700;
+
     margin-bottom: 20px;
+
     color: var(--color-accent);
 }
 
+
 section p {
     font-size: 20px;
+
     font-style: italic;
     line-height: 1.8;
+
     color: var(--color-text-muted);
+
     max-width: 650px;
+
+    overflow-wrap: break-word;
 }
+
 
 /* ================================
    SECTION CONTENT CONTAINERS
-   Shared rule — centers content in
-   about, projects and contact
 ================================ */
-.about-content, 
-.projects-content, 
-.contact-content {
+.about-content,
+.projects-content,
+.contact-content,
+.skills-content {
+
+    width: 100%;
     max-width: 1100px;
-    margin: 0 auto
+
+    margin: 0 auto;
+
+    min-width: 0;
 }
+
 
 /* ================================
    ABOUT SECTION
-   FIX 8 — lightened all section backgrounds
 ================================ */
 #about {
-    background: linear-gradient(180deg, #1a2e1a 0%, #162814 100%);
+    background: linear-gradient(
+        180deg,
+        #1a2e1a 0%,
+        #162814 100%
+    );
 }
+
 
 /* ================================
    PROJECTS SECTION
 ================================ */
 #projects {
-    background: linear-gradient(180deg, #162814 0%, #1a2e1a 100%);
+    background: linear-gradient(
+        180deg,
+        #162814 0%,
+        #1a2e1a 100%
+    );
 }
+
 
 /* ================================
    SKILLS SECTION
 ================================ */
 #skills {
-    background: linear-gradient(180deg, #1a2e1a 0%, #162814 100%);
+    background: linear-gradient(
+        180deg,
+        #1a2e1a 0%,
+        #162814 100%
+    );
 }
+
 
 /* ================================
    CONTACT SECTION
 ================================ */
 #contact {
-    background: linear-gradient(180deg, #162814 0%, #0d1a0d 100%);
+    background: linear-gradient(
+        180deg,
+        #162814 0%,
+        #0d1a0d 100%
+    );
 }
 
+
 /* ================================
-   FOOTER
-   FIX 9 — "40 px" had a space, making it invalid
-   Changed to "40px" which is correct
+   PROJECTS GRID
 ================================ */
-footer {
-    background-color: #050a05;
-    padding: 30px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-text-muted);
-    font-size: 13px;
+
+/*
+   IMPORTANT FIX:
+
+   minmax(0, 1fr) prevents long English
+   text from forcing one grid column
+   to become wider than the others.
+*/
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+
+    margin-top: 50px;
+
+    width: 100%;
+    min-width: 0;
 }
+
+
+/* ================================
+   PROJECT CARD
+================================ */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(143, 188, 143, 0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    /*
+       Prevent card content from
+       forcing the grid wider.
+    */
+    min-width: 0;
+    width: 100%;
+
+    transition: all 0.3s ease;
+}
+
+
+/* ================================
+   PROJECT IMAGE
+================================ */
+.project-image {
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Image hover zoom */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   PROJECT INFORMATION
+================================ */
+.project-info {
+    padding: 24px 24px 0 24px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.project-info h3 {
+    font-family: var(--font-pixel);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--color-accent);
+
+    margin-bottom: 12px;
+
+    /*
+       Allows long English titles
+       to wrap instead of expanding
+       the card.
+    */
+    overflow-wrap: break-word;
+}
+
+
+.project-info p {
+    font-size: 14px;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.7;
+
+    font-style: normal;
+
+    max-width: none;
+
+    /*
+       Important for English text.
+    */
+    overflow-wrap: break-word;
+}
+
+
+/* Disclaimer */
+.project-disclaimer {
+    display: block;
+
+    font-size: 11px;
+
+    color: rgba(240, 244, 240, 0.4);
+
+    margin-top: 8px;
+
+    font-style: italic;
+
+    overflow-wrap: break-word;
+}
+
+
+/* ================================
+   PROJECT BUTTON
+================================ */
+.project-link {
+    display: block;
+
+    margin: 24px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    border: 1px solid rgba(143, 188, 143, 0.3);
+
+    color: var(--color-text-light);
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    transition: all 0.3s ease;
+
+    /*
+       Prevent long text from
+       breaking the button.
+    */
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+
+.project-link:hover {
+    background: rgba(143, 188, 143, 0.1);
+
+    border-color: var(--color-accent);
+
+    color: var(--color-accent);
+}
+
+
+/* Card hover */
+.project-card:hover {
+    border-color: rgba(143, 188, 143, 0.5);
+
+    transform: translateY(-4px);
+}
+
 
 /* ================================
    SKILLS SECTION
 ================================ */
 
-/* Center the section content */
-.skills-content {
-    max-width: 1100px;
-    margin: 0 auto;
-}
+/*
+   Four equal columns.
 
-/* Grid - 4 columns on desktop */
+   minmax(0, 1fr) prevents long
+   English skill names from
+   breaking the layout.
+*/
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
     gap: 24px;
+
     margin-top: 50px;
+
+    width: 100%;
+    min-width: 0;
 }
 
-/* Each card */
+
+/* ================================
+   SKILL CARD
+================================ */
 .skill-card {
-    /* Dark background with slight transparency */
     background: rgba(255, 255, 255, 0.05);
 
-    /* Subtle green border */
     border: 1px solid rgba(143, 188, 143, 0.2);
 
-    /* Inner spacing */
     padding: 30px 24px;
 
-    /* Smooth hover animation */
+    min-width: 0;
+    width: 100%;
+
     transition: all 0.3s ease;
 }
 
-/* Card title */
+
+/* Skill title */
 .skill-card h3 {
     font-family: var(--font-pixel);
+
     font-size: 14px;
     font-weight: 600;
+
     color: var(--color-accent);
+
     margin-bottom: 20px;
 
-    /* Line under the title */
     padding-bottom: 12px;
-    border-bottom: 1px solid rgba(143, 188, 143, 0.2);
+
+    border-bottom:
+        1px solid rgba(143, 188, 143, 0.2);
+
+    /*
+       Allows titles to wrap naturally.
+    */
+    overflow-wrap: break-word;
 }
 
-/* The bullet list */
+
+/* Skill list */
 .skill-card ul {
-    /* Remove default bullet style */
     list-style: none;
 
-    /* Stack items vertically */
     display: flex;
     flex-direction: column;
+
     gap: 12px;
+
+    min-width: 0;
 }
 
-/* Each bullet point */
+
+/* Skill item */
 .skill-card li {
     font-size: 16px;
+
     color: var(--color-text-muted);
+
     line-height: 1.5;
 
-    /* Custom bullet - a small green dot */
     padding-left: 16px;
+
     position: relative;
+
+    /*
+       Important for long English
+       phrases.
+    */
+    overflow-wrap: break-word;
 }
 
-/* The custom green dot before each item */
+
+/* Custom bullet */
 .skill-card li::before {
     content: '▸';
+
     position: absolute;
+
     left: 0;
+
     color: var(--color-accent);
+
     font-size: 14px;
 }
 
-/* Hover effect on card */
+
+/* Skill card hover */
 .skill-card:hover {
     background: rgba(143, 188, 143, 0.08);
+
     border-color: rgba(143, 188, 143, 0.5);
 
-    /* Lift the card slightly */
     transform: translateY(-4px);
 }
+
 
 /* ================================
    CONTACT SECTION
@@ -357,432 +681,592 @@ footer {
 .contact-intro {
     margin-top: 16px;
     margin-bottom: 50px;
+
     font-style: normal;
+
     max-width: 500px;
 }
 
-/* Two column layout */
+
+/* Contact grid */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 60px;
+
+    min-width: 0;
 }
 
-/* Each info row */
+
+/* Contact item */
 .contact-item {
     display: flex;
+
     flex-direction: column;
+
     gap: 6px;
+
     margin-bottom: 30px;
+
+    min-width: 0;
 }
 
-/* Labels like "Email" and "Location" */
+
+/* Labels */
 .contact-label {
     font-size: 11px;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
+
     color: var(--color-accent);
 }
 
-/* Email and location text */
+
+/* Email and location */
 .contact-item a,
 .contact-item span {
     font-size: 15px;
+
     color: var(--color-text-light);
+
     text-decoration: none;
+
+    overflow-wrap: break-word;
 }
 
-/* Underline on email hover */
+
+/* Email hover */
 .contact-item a:hover {
     color: var(--color-accent);
 }
 
-/* Social links stracked vertically*/
+
+/* ================================
+   SOCIAL LINKS
+================================ */
 .contact-social {
     display: flex;
+
     flex-direction: column;
+
     gap: 16px;
+
+    min-width: 0;
 }
 
-/* Each social button */
+
+/* Social button */
 .social-link {
     display: inline-block;
+
     padding: 12px 28px;
+
     border: 1px solid rgba(143, 188, 143, 0.3);
+
     color: var(--color-text-light);
+
     text-decoration: none;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     font-size: 13px;
+
     transition: all 0.3s ease;
+
     width: fit-content;
+
+    max-width: 100%;
 }
+
 
 .social-link:hover {
     background: rgba(143, 188, 143, 0.1);
+
     border-color: var(--color-accent);
+
     color: var(--color-accent);
 }
 
-/* ================================
-   PROJECTS SECTION
-================================ */
-
-/* Two column grid - same feel as skills */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
-/* Each card */
-.project-card {
-    /* Smae card style as skills */
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(143, 188, 143, 0.2);
-
-    /* Stack image, info, button vertically */
-    display: flex;
-    flex-direction: column;
-
-    /* Smooth hover*/
-    transition: all 0.3s ease;
-}
-
-/* Image container - fixed height so bot are indentical */
-.project-image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-}
-
-/* The actual image fills the container */
-.project-image img {
-    width: 100%;
-    height: 100%;
-
-    /* Crops image to fill without stretching */
-    object-fit: cover;
-
-    /* Smooth zoom on hover */
-    transition: transform 0.4s ease;
-}
-
-/* Zoom image slightly when card is hovered */
-.project-card:hover .project-image img {
-    transform: scale(1.05);
-}
-
-/* Text area inside card */
-.project-info {
-    padding: 24px 24px 0 24px;
-    flex: 1;
-}
-
-/* Prject title */
-.project-info h3 {
-    font-family: var(--font-pixel);
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-accent);
-    margin-bottom: 12px;
-}
-
-/* Project description */
-.project-info p {
-    font-size: 14px;
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    font-style: normal;
-    max-width: none;
-}
-
-/* Disclaimer text */
-.project-disclaimer {
-    display: block;
-    font-size: 11px;
-    color: rgba(240, 244, 240, 0.4);
-    margin-top: 8px;
-    font-style: italic;
-}
-
-/* View Project button - sits at bottom of card */
-.project-link {
-    display: block;
-    margin: 24px;
-    padding: 12px;
-    text-align: center;
-    border: 1px solid rgba(143, 188, 143, 0.3);
-    color: var(--color-text-light);
-    text-decoration: none;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 12px;
-    transition: all 0.3s ease;
-}
-
-.project-link:hover {
-    background: rgba(143, 188, 143, 0.1);
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-}
-
-/* Card hover lift */
-.project-card:hover {
-    border-color: rgba(143, 188, 143, 0.5);
-    transform: translateY(-4px);
-}
 
 /* ================================
    PAGE LOADER
 ================================ */
-
-/* Full screen overlay */
 .page-loader {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
 
-    /* Same dark green as your site */
     background: #0a1208;
 
-    /* Sit above absolutely everything */
     z-index: 9999;
 
-    /* Center the content */
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    /* Fade out transition */
-    transition: opacity 0.8s ease, visibility 0.8s ease;
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
 }
 
-/* When JavaScript adds the "hidden" class */
+
+/* Hidden loader */
 .page-loader.hidden {
     opacity: 0;
+
     visibility: hidden;
 }
 
-/* Content inside loader */
+
+/* Loader content */
 .loader-content {
     text-align: center;
 }
 
-/* Your name on the loader */
+
+/* Loader name */
 .loader-name {
     font-family: var(--font-pixel);
+
     font-size: 24px;
     font-weight: 300;
+
     color: var(--color-accent);
+
     letter-spacing: 4px;
+
     margin-bottom: 30px;
+
     font-style: italic;
 
-    /* Fade in animation */
-    animation: fadeInUp 0.8s ease forwards;
+    animation:
+        fadeInUp 0.8s ease forwards;
 }
 
-/* The loading bar container */
+
+/* Loading bar */
 .loader-bar {
     width: 200px;
     height: 2px;
+
     background: rgba(143, 188, 143, 0.2);
+
     margin: 0 auto;
+
     overflow: hidden;
 }
 
-/* The animated progress bar */
+
+/* Progress */
 .loader-progress {
     height: 100%;
+
     background: var(--color-accent);
+
     width: 0%;
 
-    /* Grows from 0 to 100% over 1.2 seconds */
-    animation: loadProgress 1.2s ease forwards;
+    animation:
+        loadProgress 1.2s ease forwards;
 }
 
-/* Fade in from below animation */
+
+/* Fade in */
 @keyframes fadeInUp {
+
     from {
         opacity: 0;
-        transform: translateY(20px);
+
+        transform:
+            translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
-/* Progress bar grows */
+
+/* Progress animation */
 @keyframes loadProgress {
-    from { width: 0%; }
-    to { width: 100%; }
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
 }
+
 
 /* ================================
    HAMBURGER BUTTON
-   Hidden on desktop, shown on mobile
 ================================ */
 .hamburger {
-    /* Hidden on desktop */
     display: none;
 
-    /* Remove default button styles  */
     background: none;
+
     border: none;
+
     cursor: pointer;
 
-    /* Stack the three lines vertically */
     flex-direction: column;
+
     gap: 5px;
+
     padding: 4px;
 }
 
-/* Each line of the hamburger */
+
+/* Hamburger lines */
 .hamburger span {
     display: block;
+
     width: 25px;
     height: 2px;
-    background: var(--color-text-light);
 
-    /* Smooth animation when transforming to X */
-    transition: all 0.3s ease;
+    background:
+        var(--color-text-light);
+
+    transition:
+        all 0.3s ease;
 }
 
-/* When menu is open - top line rotates to form X */
+
+/* Open menu - first line */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform:
+        translateY(7px)
+        rotate(45deg);
 }
 
-/* When menu is open - middle line disappears */
+
+/* Open menu - middle line */
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
 
-/* When menu is open - bottom line rotates to form X */
+
+/* Open menu - bottom line */
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
 }
 
+
 /* ================================
-   TABLET — max 768px
+   LARGE TABLET
+   max 1000px
+================================ */
+@media (max-width: 1000px) {
+
+    /*
+       Projects become 2 columns
+       before they become too narrow.
+    */
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /*
+       Skills become 2 columns.
+    */
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .hero-content h1 {
+        font-size: 64px;
+    }
+}
+
+
+/* ================================
+   TABLET
+   max 768px
 ================================ */
 @media (max-width: 768px) {
 
-    /* HEADER */
+    /* ============================
+       HEADER
+    ============================ */
+
     header {
         padding: 16px 24px;
     }
 
-    /* Hide nav links by default on mobile */
+
+    /* Hide navigation */
     nav {
         display: none;
+
         position: fixed;
+
         top: 0;
         left: 0;
+
         width: 100%;
         height: 100vh;
-        background: rgba(10, 18, 8, 0.97);
+
+        background:
+            rgba(10, 18, 8, 0.97);
+
         flex-direction: column;
+
         align-items: center;
         justify-content: center;
+
         gap: 40px;
+
         z-index: 200;
     }
 
-    /* Show nav when hamburger is clicked */
+
+    /* Show navigation */
     nav.open {
         display: flex;
     }
 
-    /* Bigger links inside mobile menu */
+
+    /* Mobile navigation links */
     nav a {
         font-size: 18px;
+
         letter-spacing: 4px;
     }
 
-    /* Show hamburger button */
+
+    /* Show hamburger */
     .hamburger {
         display: flex;
+
         z-index: 300;
     }
 
-    /* Hide lang switch on mobile header */
+
+    /* Hide language switch */
     header .lang-switch {
         display: none;
     }
 
-    /* HERO */
+
+    /* ============================
+       HERO
+    ============================ */
+
     .hero-content h1 {
         font-size: 36px;
     }
 
-    .hero-subtitle {
+
+    .hero-content .hero-subtitle {
         font-size: 11px;
+
         letter-spacing: 2px;
     }
 
-    /* SECTION */
+
+    /* ============================
+       SECTIONS
+    ============================ */
+
     section {
         padding: 70px 24px;
     }
+
 
     section h2 {
         font-size: 20px;
     }
 
-    /* PROJECTS - 1 column on tablet */
+
+    /* ============================
+       PROJECTS
+    ============================ */
+
     .projects-grid {
         grid-template-columns: 1fr;
+
+        gap: 24px;
     }
 
-    /* SKILLS - 2 columns on tablet */
+
+    /* ============================
+       SKILLS
+    ============================ */
+
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
-    /* CONTACT - stack vertically */
+
+    /* ============================
+       CONTACT
+    ============================ */
+
     .contact-grid {
         grid-template-columns: 1fr;
+
         gap: 40px;
     }
 
-    /* FOOTER */
+
+    /* ============================
+       FOOTER
+    ============================ */
+
     footer {
         flex-direction: column;
+
         gap: 16px;
+
         text-align: center;
+
         padding: 24px;
     }
 }
 
+
 /* ================================
-   MOBILE — max 480px
+   MOBILE
+   max 480px
 ================================ */
 @media (max-width: 480px) {
 
-    /* HERO */
+    /* ============================
+       HEADER
+    ============================ */
+
+    header {
+        padding: 14px 16px;
+    }
+
+
+    /* ============================
+       HERO
+    ============================ */
+
+    .hero-content {
+        padding: 0 16px;
+    }
+
+
     .hero-content h1 {
         font-size: 28px;
     }
 
-    /* SKILLS - 1 column on small phones */
-    .skills-grid {
-        grid-template-columns: 1fr;
+
+    .hero-content .hero-subtitle {
+        font-size: 10px;
+
+        letter-spacing: 2px;
     }
 
-    /* SECTIONS */
+
+    /* ============================
+       SECTIONS
+    ============================ */
+
     section {
         padding: 60px 16px;
     }
 
-    /* LOADER */
+
+    section h2 {
+        font-size: 20px;
+    }
+
+
+    /* ============================
+       PROJECTS
+    ============================ */
+
+    .project-image {
+        height: 200px;
+    }
+
+
+    .project-info {
+        padding: 20px 20px 0 20px;
+    }
+
+
+    .project-link {
+        margin: 20px;
+
+        padding: 12px 8px;
+
+        font-size: 11px;
+    }
+
+
+    /* ============================
+       SKILLS
+    ============================ */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .skill-card {
+        padding: 24px 20px;
+    }
+
+
+    /* ============================
+       LOADER
+    ============================ */
+
     .loader-name {
         font-size: 16px;
     }
+
+
+    .loader-bar {
+        width: 160px;
+    }
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background-color: #050a05;
+
+    padding: 30px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color-text-muted);
+
+    font-size: 13px;
 }
