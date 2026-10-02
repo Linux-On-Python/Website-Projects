@@ -354,9 +354,147 @@
 
                     </div>
 
+                    <!-- Video Project 1 -->
+
+                    <div class="project-card">
+
+                        <div class="project-image video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/bSrCyF3-EHQ"
+                                title="Discover the Epidermis: Structure and Medical Histology"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Discover the Epidermis: Structure and Medical Histology</h3>
+
+                            <p>
+                                An educational video project focused on the structure and medical
+                                histology of the epidermis.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://www.youtube.com/shorts/bSrCyF3-EHQ"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Watch Video
+
+                        </a>
+
+                    </div>
+
+                    <!-- Video Project 2 -->
+
+                    <div class="project-card">
+
+                        <div class="project-image video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/ZPqFxCT9E9s"
+                                title="The Story of the Angel Who Chose Pride"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>The Story of the Angel Who Chose Pride</h3>
+
+                            <p>
+                                The history of the beginning. The Angel that was consumed by pride.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://www.youtube.com/watch?v=ZPqFxCT9E9s"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Watch Video
+
+                        </a>
+
+                    </div>
+
+                    <!-- Drawing Project 1 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/drawing-1.jpeg"
+                                alt="Original drawing by Miguel Leon">
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Original Illustration</h3>
+
+                            <p>
+                                An original character illustration created by Miguel Leon,
+                                exploring character design and visual expression.
+                            </p>
+
+                        </div>
+
+                        <!-- Using an anchor tag styled as project-link -->
+                         
+                        <a href="javascript:void(0);" onclick="openModal('assets/images/drawing-1.jpeg')" class="project-link">
+                            View Full Drawing
+                        </a>
+
+                    </div>
+
+                    <!-- Drawing Project 2 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/drawing-2.jpeg"
+                                alt="Original drawing by Miguel Leon">
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Original Illustration</h3>
+
+                            <p>
+                                An original character illustration created by Miguel Leon,
+                                exploring character design and visual expression.
+                            </p>
+
+                        </div>
+
+                        <!-- Using an anchor tag styled as project-link -->
+
+                        <a href="javascript:void(0);" onclick="openModal('assets/images/drawing-2.jpeg')" class="project-link">
+                            View Full Drawing
+                        </a>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </section>
 
 
@@ -511,6 +649,15 @@
 
     <!-- JavaScript -->
     <script src="JS/main.js"></script>
+
+    <!-- Full-Screen Image Modal Popup -->
+
+    <div id="drawingModal" class="drawing-modal">
+
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        
+        <img class="modal-drawing-content" id="modalImage" alt="Full Size Drawing">
+    </div>
 
 </body>
 </html>
