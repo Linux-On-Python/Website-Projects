@@ -6,9 +6,11 @@
     <title>Mi Portafolio - Miguel Alejandro Leon Cordero</title>
 
     <!-- Favicon - el logo en la ventana del navegador -->
-     <link rel="icon" type="image/png" href="assets/images/Logo-without-background.png">
+    <link rel="icon" type="image/png" href="assets/images/Logo-without-background.png">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+
     <!-- Conexión CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -211,12 +213,6 @@
                                 LocalStorage, visualizadores de audio adaptativos e integración con Screen WakeLock.
                             </p>
                     
-                            <span class="project-disclaimer">
-                                * Proyecto fan promocional no comercial. Todos los derechos de la música,
-                                composiciones originales y propiedades intelectuales pertenecen a
-                                sus respectivos creadores y a SEGA.
-                            </span>
-                    
                         </div>
                     
                         <!-- Botón al fondo -->
@@ -315,6 +311,125 @@
                             target="_blank"
                             rel="noopener noreferrer">
                             Ver Proyecto
+                        </a>
+
+                    </div>
+
+                    <!-- Video Project 1 -->
+                    <div class="project-card">
+
+                        <div class="project-image video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/bSrCyF3-EHQ"
+                                title="Discover the Epidermis: Structure and Medical Histology"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>Discover the Epidermis: Structure and Medical Histology</h3>
+
+                            <p>
+                                An educational video project focused on the structure and medical
+                                histology of the epidermis.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://www.youtube.com/shorts/bSrCyF3-EHQ"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Ver Video
+
+                        </a>
+
+                    </div>
+
+                    <!-- Video Project 2 -->
+                    <div class="project-card">
+
+                        <div class="project-image video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/ZPqFxCT9E9s"
+                                title="La historia del comienzo. El Ángel que fue consumido por el orgullo"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>La historia del comienzo. El Ángel que fue consumido por el orgullo</h3>
+
+                            <p>
+                                La historia del comienzo. El Ángel que fue consumido por el orgullo.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://www.youtube.com/watch?v=ZPqFxCT9E9s"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Ver Video
+
+                        </a>
+
+                    </div>
+
+                    <!-- Drawing Project 1 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+                            <img src="assets/images/drawing-1.jpeg"
+                                alt="Ilustración original por Miguel Leon">
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Ilustración Original</h3>
+                            <p>
+                                Una ilustración de personaje original creada por Miguel Leon,
+                                explorando el diseño de personajes y la expresión visual.
+                            </p>
+                        </div>
+
+                        <a href="javascript:void(0);" onclick="openModal('assets/images/drawing-1.jpeg')" class="project-link">
+                            Ver Dibujo Completo
+                        </a>
+
+                    </div>
+
+                    <!-- Drawing Project 2 -->
+                    <div class="project-card">
+
+                        <div class="project-image">
+                            <img src="assets/images/drawing-2.jpeg"
+                                alt="Ilustración original por Miguel Leon">
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Ilustración Original</h3>
+                            <p>
+                                Una ilustración de personaje original creada por Miguel Leon,
+                                explorando el diseño de personajes y la expresión visual.
+                            </p>
+                        </div>
+
+                        <a href="javascript:void(0);" onclick="openModal('assets/images/drawing-2.jpeg')" class="project-link">
+                            Ver Dibujo Completo
                         </a>
 
                     </div>
@@ -434,5 +549,12 @@
         
     <!-- JavaScript -->
     <script src="JS/main.js"></script>
+
+    <!-- Full-Screen Image Modal Popup -->
+    <div id="drawingModal" class="drawing-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-drawing-content" id="modalImage" alt="Dibujo en tamaño completo">
+    </div>
+
 </body>
 </html>
